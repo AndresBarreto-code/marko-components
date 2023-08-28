@@ -1,8 +1,10 @@
-class {}
 static function handleClick() {
-  alert("Component 2 Clicked!");
+  alert("Component 2 Clicked by static function!");
 }
 <h1>Component 2</h1>
 <button on-click(handleClick)>
-  Click me
+  Click static function
+</button>
+<button on-click(() => alert("Component 2 Clicked by arrow function!"))>
+  Click arrow function
 </button>
