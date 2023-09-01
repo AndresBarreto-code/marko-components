@@ -1,0 +1,12 @@
+$ const isWebpSupported = (
+  $global.request.headers.get("accept")?.includes("image/webp")
+);
+
+<h1>Split Component Using Global</h1>
+<button on-click("handleClick")>
+  Click static function
+</button>
+<button on-click(() => alert("Component 1 Clicked by arrow function!"))>
+  Click arrow function
+</button>
+<p>${isWebpSupported ? "Webp is supported" : "Webp is not supported"}</p>
